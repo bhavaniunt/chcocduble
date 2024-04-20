@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chocolate Store</title>
+<style>
+  body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+  .header, .footer { background: linear-gradient(to right, #8e2de2, #4a00e0); padding: 10px; text-align: center; color: white; }
+  .nav { background: #f0f0f0; padding: 10px 0; text-align: center; }
+  .nav a { margin: 0 15px; text-decoration: none; color: #333; }
+  .product { border: 1px solid #ddd; margin: 10px; float: left; width: calc(33.333% - 20px); box-sizing: border-box; padding: 10px; text-align: center; }
+  .footer { position: fixed; bottom: 0; width: 100%; }
+</style>
+<script>
+  let cart = 0;
+  let totalPrice = 0;
+  function addToCart(price) {
+    cart += 1;
+    totalPrice += price;
+    alert(`Total items: ${cart}, Total Price: $${totalPrice}`);
+  }
+</script>
+</head>
+<body>
+
+<div class="header">
+  <h1>Welcome to Our Chocolate Store</h1>
+</div>
+
+<div class="nav">
+  <a href="#">Home</a>
+  <a href="#">Cart</a>
+  <a href="#">Contact</a>
+</div>
+
+<div class="products">
+  <div class="product">
+    <h2>Milk Chocolate</h2>
+    <p>$5</p>
+    <button onclick="addToCart(5)">Add to Cart</button>
+  </div>
+  <div class="product">
+    <h2>Dark Chocolate</h2>
+    <p>$7</p>
+    <button onclick="addToCart(7)">Add to Cart</button>
+  </div>
+  <div class="product">
+    <h2>White Chocolate</h2>
+    <p>$6</p>
+    <button onclick="addToCart(6)">Add to Cart</button>
+  </div>
+</div>
+
+<div class="footer">
+  <p>&copy; 2023 Chocolate Store</p>
+</div>
+
+</body>
+</html>
